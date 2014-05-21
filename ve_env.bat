@@ -13,7 +13,7 @@ rem 3.3.1 generate DSSCOMMaster.h/.cpp
 echo Start generating DSSCOMMaster.h/.cpp...
 cd /d z:\
 msbuild "z:\COM\Projects\DSSCOMMaster\DSSCOMMaster.vcxproj" /t:Rebuild /p:Configuration=Debug /p:Platform="Win32"
-cd z:\COM\IDL
+cd /d z:\COM\IDL
 perl ..\..\BuildScripts\one.pl -MSI_COM
 make cleangenerated
 make
@@ -26,12 +26,13 @@ XMLHeaderGen.exe -in xml.mdb -out XML_Constants.h -h
 cp XML_Constants.h XML_Constants.cpp Z:\COM\SourceCode\DSSIncludes
 echo End generating XML_Constants.h/.cpp.
 
+rem 3.4 is no use now according to Lei
 rem 3.4 generate GeneratedSystemObjectsIDs.h/.cpp
 rem echo Start generating GeneratedSystemObjectsIDs.h/.cpp...
 rem cd /d z:\
 rem cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.h
 rem cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.cpp
-rem cd z:\COM\COMShared\COMShared\PrivateSource\Source
+rem cd /d z:\COM\COMShared\COMShared\PrivateSource\Source
 rem perl GenSystemObjectsIDs.pl Z:\BinSource
 rem echo End generating GeneratedSystemObjectsIDs.h/.cpp
 
