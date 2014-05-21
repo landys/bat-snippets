@@ -27,13 +27,13 @@ cp XML_Constants.h XML_Constants.cpp Z:\COM\SourceCode\DSSIncludes
 echo End generating XML_Constants.h/.cpp.
 
 rem 3.4 generate GeneratedSystemObjectsIDs.h/.cpp
-echo Start generating GeneratedSystemObjectsIDs.h/.cpp...
-cd /d z:\
-cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.h
-cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.cpp
-cd z:\COM\COMShared\COMShared\PrivateSource\Source
-perl GenSystemObjectsIDs.pl Z:\BinSource
-echo End generating GeneratedSystemObjectsIDs.h/.cpp
+rem echo Start generating GeneratedSystemObjectsIDs.h/.cpp...
+rem cd /d z:\
+rem cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.h
+rem cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.cpp
+rem cd z:\COM\COMShared\COMShared\PrivateSource\Source
+rem perl GenSystemObjectsIDs.pl Z:\BinSource
+rem echo End generating GeneratedSystemObjectsIDs.h/.cpp
 
 rem 4 build one-tier-bundles
 echo Start building one-tier-bundles
