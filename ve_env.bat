@@ -11,7 +11,7 @@ echo End registry.
 
 rem 3.3.1 generate DSSCOMMaster.h/.cpp
 echo Start generating DSSCOMMaster.h/.cpp...
-cd z:\
+cd /d z:\
 msbuild "z:\COM\Projects\DSSCOMMaster\DSSCOMMaster.vcxproj" /t:Rebuild /p:Configuration=Debug /p:Platform="Win32"
 cd z:\COM\IDL
 perl ..\..\BuildScripts\one.pl -MSI_COM
@@ -21,14 +21,14 @@ echo End generating DSSCOMMaster.h/.cpp.
 
 rem 3.3.2 generate XML_Constants.h/.cpp
 echo Start generating XML_Constants.h/.cpp...
-cd z:\SDK\XML
+cd /d z:\SDK\XML
 XMLHeaderGen.exe -in xml.mdb -out XML_Constants.h -h
 cp XML_Constants.h XML_Constants.cpp Z:\COM\SourceCode\DSSIncludes
 echo End generating XML_Constants.h/.cpp.
 
 rem 3.4 generate GeneratedSystemObjectsIDs.h/.cpp
 echo Start generating GeneratedSystemObjectsIDs.h/.cpp...
-cd z:\
+cd /d z:\
 cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.h
 cleartool co -unreserved -nc COM\COMShared\COMShared\PrivateSource\Source\GeneratedSystemObjectsIDs.cpp
 cd z:\COM\COMShared\COMShared\PrivateSource\Source
@@ -37,7 +37,7 @@ echo End generating GeneratedSystemObjectsIDs.h/.cpp
 
 rem 4 build one-tier-bundles
 echo Start building one-tier-bundles
-cd z:\BIWebApp\build
+cd /d z:\BIWebApp\build
 build one-tier-bundles
 echo End building one-tier-bundles
 
