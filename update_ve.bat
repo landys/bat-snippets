@@ -16,7 +16,7 @@ if not exist "!build_path!" (
 cd /d z:\
 cleartool update -nov .
 
-xcopy "!build_path!\*" z:\ /E
+xcopy "!build_path!\*" z:\ /E /C /R /I /Y
 
 cd /d "%~dp0"
 
