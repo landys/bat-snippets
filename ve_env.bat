@@ -1,4 +1,6 @@
 @echo off & setlocal EnableDelayedExpansion
+@rem Wang Jinde
+@rem 2014-05-12
 
 rem 2.3 registry
 echo Start registry...
