@@ -1,4 +1,6 @@
 @echo off & setlocal EnableDelayedExpansion
+@rem Wang Jinde
+@rem 2014-05-26
 
 if [%1] == [] (
 	echo usage: %0 build_version_like_0067
