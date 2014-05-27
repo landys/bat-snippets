@@ -1,0 +1,26 @@
+--- Kernel\SourceCode\OneTierClient\DSSDataImport.h	Mon May 26 21:27:14 2014
++++ Kernel\SourceCode\OneTierClient\DSSDataImport_new.h	Mon May 26 21:34:39 2014
+@@ -21,6 +21,23 @@
+ #include "Database/Database/Connection.h"
+ #include "DataType/DataType/Binary.h"
+ 
++namespace Json {
++	typedef int Int;
++	typedef unsigned int UInt;
++# if defined(JSON_NO_INT64)
++	typedef int LargestInt;
++	typedef unsigned int LargestUInt;
++#  undef JSON_HAS_INT64
++# else // if defined(JSON_NO_INT64)
++	typedef Int64 LargestInt;
++	typedef UInt64 LargestUInt;
++#  define JSON_HAS_INT64
++# endif // if defined(JSON_NO_INT64)
++}
++#include "lib_json/json/value.h"
++#include "lib_json/json/reader.h"
++#include "Database/WSAuth/PrivateSource/WSAuthenticator.h"
++
+ 
+ #include <list>
+ #include <vector>

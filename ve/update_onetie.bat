@@ -20,4 +20,4 @@ xcopy "!build_path!\*" z:\ /E /C /R /I /Y
 
 cd /d "%~dp0"
 
-call ve_env.bat
+call onetie_env.bat
