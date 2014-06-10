@@ -1,6 +1,6 @@
 # Scripts for VE
 
-I created a bat script to run the steps from 2.4 to 4.2 except for the steps to setup compilation environment or run i-server including 3.1, 3.2, 3.5, 3.6 and 4.1. If you have already gone through the tutorial once, which means the compilation environment is fine, then the script is enough. If not, please do 3.1, 3.2, 3.6 and 4.1 first. Please find the script (onetie_env.bat) in \\chn-team-ke1\Documentation\VE\scripts\env. Please run it in Visual Studio Command Prompt, since it needs msbuild to build VC++ projects.
+I created a bat script onetie_env.bat to run the steps from 2.4 to 4.2 except for the steps to setup compilation environment or run i-server including 3.1, 3.2, 3.5, 3.6 and 4.1. If you have already gone through the tutorial once, which means the compilation environment is fine, then the script is enough. If not, please do 3.1, 3.2, 3.6 and 4.1 first. Please run it in Visual Studio Command Prompt, since it needs msbuild to build VC++ projects.
 
 I also created more bat scripts shared in the folder. Another useful one for one tie client is update_onetie.bat.
 
