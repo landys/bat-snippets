@@ -7,19 +7,6 @@ if [%1] == [] (
 	exit /b 0
 )
 
-set build_path=\\WAS-CC2-TECH\cm_bld1\9.5.1000.%1\DEBUG
-if not exist "!build_path!" (
-	echo Cannot find the build in the path "!build_path!"
-	exit /b 1
-)
-
-cd /d z:\
-cleartool update -nov .
-
-xcopy "!build_path!\*" z:\ /E /C /R /I /Y
-
-cd /d "%~dp0"
-
-call onetie_env.bat
+call update_onetie.bat %1
 
 call build_ve.bat
