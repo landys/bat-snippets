@@ -1,0 +1,1 @@
+reg export "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\MicroStrategy\Data Sources\CastorServer" %1
